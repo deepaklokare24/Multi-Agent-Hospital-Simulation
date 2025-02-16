@@ -1,0 +1,114 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.env
+.venv
+.python-version
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.project
+.pydevproject
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# Project specific
+data/chroma/
+data/example_images/
+data/processed/
+*.db
+*.sqlite3
+*.log
+logs/
+preprocessed_patients.csv
+medical_database.json
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Testing
+.coverage
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+
+# Distribution
+.Python
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+
+# System Files
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+*.temp
+
+# Large media files
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.ico
+*.mov
+*.mp4
+*.mp3
+*.zip
+*.tar.gz
+*.rar
+
+# API Keys and Secrets
+*.pem
+*.key
+*.cert
+secrets.yaml
+secrets.json
+
+# Logs and Databases
+*.log
+*.sql
+*.sqlite
+
+# Local development settings
+local_settings.py
+settings_local.py
+config_local.py
+
+# Cache directories
+.cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json 

@@ -132,6 +132,73 @@ hospital_simulation/
    - Detailed agent processing logs
    - Professional medical documentation
 
+## 🎯 Data Preparation
+
+Before running the main application, you need to prepare the initial dataset. Our automated data preparation pipeline handles everything from data download to synthetic data generation.
+
+### 1. Run Data Preparation
+
+Simply run the data preparation script:
+```bash
+python -m hospital_simulation.data.prepare_data
+```
+
+This script automatically performs the following tasks:
+
+1. **Dataset Initialization**
+   - Automatically downloads required datasets using Kaggle API
+   - Initializes necessary directory structures
+   - Sets up data processing pipeline
+
+2. **Medical Dataset Processing**
+   - Loads disease-symptoms dataset
+   - Preprocesses and structures medical data
+   - Creates standardized symptom profiles
+   - Generates preprocessed_patients.csv
+
+3. **Synthetic Patient Generation**
+   - Leverages Groq LLM for generating realistic patient identities
+   - Ensures demographic diversity
+   - Creates consistent patient IDs and medical records
+   - Maintains data consistency with medical profiles
+
+4. **X-ray Dataset Integration**
+   - Downloads and processes chest X-ray classification dataset
+   - Categorizes images by condition (Normal/Pneumonia)
+   - Prepares vision analysis pipeline
+   - Sets up example image repository
+
+The script creates the following directory structure:
+```bash
+hospital_simulation/data/
+├── processed/              # Processed patient data
+│   └── preprocessed_patients.csv
+├── example_images/        # Example X-ray images
+│   ├── xray_normal_*.jpg
+│   └── xray_pneumonia_*.jpg
+└── chroma/               # Vector database
+    └── medical_knowledge.db
+```
+
+### 2. Monitor Progress
+
+During data preparation, you'll see progress indicators for:
+- Dataset downloads and processing
+- Patient identity generation
+- X-ray image processing
+- Database initialization
+
+The entire process typically takes 10-15 minutes, depending on your system and internet connection. The script handles all necessary downloads and preprocessing automatically.
+
+### 3. Verification
+
+After the preparation is complete, verify the setup by checking:
+1. The existence of `preprocessed_patients.csv` in the processed directory
+2. Example X-ray images in the example_images directory
+3. Initialized ChromaDB database
+
+If any step fails, the script will provide detailed error messages and suggestions for resolution.
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit pull requests.
